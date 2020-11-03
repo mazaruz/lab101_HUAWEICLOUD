@@ -100,12 +100,6 @@ Now we have created our first VPC, subnet and route table. But the default route
 >
 > A Custom Route Table can be created manually under specific VPC. The subnet then has to be associated with the custom route table to route the traffic. 
 
-
-#################################################################################################################
-### Task 2 - Configure VPC Flow Logs
-
-#################################################################################################################
-
 ### Task 2 - Create a public subnet and a custom route table
 
 1. Navigate to **Network Console** and select **Subnets**
@@ -237,17 +231,9 @@ Because we will need security group specifically for each of our ECS, we need to
     - Description: For Internal SSH acccess from sg-ssh-internet
 8. Click **OK** to create the inbound rule
 
+### Task 3.5 - Create Elastic Cloud Server (ECS)
 
-#################################################################################################################
-### Task 3.5 Create Keypair
-
->> Still figuring out with the support
-
-#################################################################################################################
-
-### Task 3.6 - Create Elastic Cloud Server (ECS)
-
-### Task 3.6.1 - Create Public ECS
+### Task 3.5.1 - Create Public ECS
 
 1. Navigate to **Cloud Server Console** and select **Elastic Cloud Server**
 2. Click **Buy ECS** to create ECS 
@@ -278,7 +264,7 @@ Because we will need security group specifically for each of our ECS, we need to
 6. Click **Next: Confirm**, review the summary of ECS configuration. Under **Enterprise Project**, select the enterprise project that you have created earlier.
 7. Check the box on **Agreement**, then click **Next**. The ECS will be created shortly. Click **Back to ECS List** and wait few minutes until the ECS becomes **running**
 
-### Task 3.6.2 - Create Private ECS
+### Task 3.5.2 - Create Private ECS
 
 1. Navigate to **Cloud Server Console** and select **Elastic Cloud Server**
 2. Click **Buy ECS** to create ECS 
@@ -309,7 +295,7 @@ Because we will need security group specifically for each of our ECS, we need to
 6. Click **Next: Confirm**, review the summary of ECS configuration. Under **Enterprise Project**, select the enterprise project that you have created earlier.
 7. Check the box on **Agreement**, then click **Next**. The ECS will be created shortly. Click **Back to ECS List** and wait few minutes until the ECS becomes **running**
 
-### Task 3.7 - Configure custom route to allow egress access for the private ECS
+### Task 3.6 - Configure custom route to allow egress access for the private ECS
 
 Because the public ECS is attached to an EIP already, you can try to access the ECS via SSH with the EIP you have assigned to them without the need for routing configuration. However, the private ECS won't be able to do so, and it requires NAT Gateway to help reaching out to the internet while we are restricting the access from the internet to this private ECS. If we want to access the private ECS from the internet, we would need to leverage the public ECS that we called "Bastion Host" or "Jump Host" to perform the remote secure shell instead. 
 
