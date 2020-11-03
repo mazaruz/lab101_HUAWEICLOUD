@@ -69,7 +69,6 @@ In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet an
 2. Understand how subnets, route tables, and routing on Huawei Cloud work
 3. Understand the differences between Public Network Access and Private Network Access
 4. Able to design and create VPC to suit your own requirements
-5. Able to create VPC Flow Logs to record traffics going in and out from VPC //Need to recheck the permission
 
 ### Duration
 30 minutes
