@@ -335,7 +335,9 @@ Now we have configured the route for private ECS, it should be able to reach the
 
 1. open **Terminal**
 2. Type in the command below to start the ssh session
-    `ssh root@<The public bastion host IP Address>`
+    ```
+    ssh root@<The public bastion host IP Address>
+    ```
 3. Enter the password that you have configured for this ECS. You should be able to connect to the public bastion host via SSH succesfully
 
 ### Task 4.1 Testing egress connection from the private ECS
@@ -348,12 +350,16 @@ Once we have successfully connected to the public ECS, now we will remote to the
     ```
 2. Enter the password that you have configure for this ECS. You should be able to connect to the private ECS successfully
 3. Enter the following command to see if this private ECS can reach to the internet
-    ```nslookup www.huaweicloud.com```
-    `curl -I https://www.huaweicloud.com/
+    ```
+    nslookup www.huaweicloud.com
+    curl -I https://www.huaweicloud.com/
+    ```
 4. If the command return HTTP/2 200, then it means that this private ECS can reach out to the internet
 5. Enter the following command to update software package in the private ECS
-    `apt-get update`
-    `apt-get -y upgrade`
+    ```
+    apt-get update
+    apt-get -y upgrade
+    ```
 6. Wait for few minutes until all the software package in this private ECS is completely updated
 
 ## Congratulation! Now you able to create a VPC with subnets to isolate public and private access! 
