@@ -248,7 +248,7 @@ Because we will need security group specifically for each of our ECS, we need to
     - Network: Select *vpc-red* or the VPC that you have created earlier, and select *subnet-pub-red* or the public subnet that you have created earlier
     - Security Group: Select the security group that you created for public ssh access e.g. sg-ssh-internet
     - EIP: Select **Use existing** and select the EIP that you have created from previous task
-5. Click **Next: Configure Advanced Settings and enter the following information:
+5. Click **Next: Configure Advanced Settings** and enter the following information:
     - ECS Name: ecs-red-bastion
     - Login Mode: **Password**
     - Password: Enter the password with the following rules:
