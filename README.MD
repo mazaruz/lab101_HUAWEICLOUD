@@ -338,7 +338,7 @@ Now we have configured the route for private ECS, it should be able to reach the
     `ssh root@<The public bastion host IP Address>`
 3. Enter the password that you have configured for this ECS. You should be able to connect to the public bastion host via SSH succesfully
 
-### Task 4.2 Testing egress connection from the private ECS
+### Task 4.1 Testing egress connection from the private ECS
 
 Once we have successfully connected to the public ECS, now we will remote to the private ECS and test our NAT Gateway setup with the custom route. 
 
@@ -354,4 +354,5 @@ Once we have successfully connected to the public ECS, now we will remote to the
     `apt-get -y upgrade`
 6. Wait for few minutes until all the software package in this private ECS is completely updated
 
-## Congratulation! Now you able to create a VPC with subnets to isolate public and private access! 
+## Congratulation! 
+## Now you able to create a VPC with subnets to isolate public and private access! 
