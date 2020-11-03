@@ -280,7 +280,7 @@ Because we will need security group specifically for each of our ECS, we need to
     - Network: Select *vpc-red* or the VPC that you have created earlier, and select *subnet-pri-red* or the public subnet that you have created earlier
     - Security Group: Select the security group that you created for private ssh access e.g. sg-ssh-internal
     - EIP: Select **Not required**
-5. Click **Next: Configure Advanced Settings and enter the following information:
+5. Click **Next: Configure Advanced Settings** and enter the following information:
     - ECS Name: ecs-red-private
     - Login Mode: **Password**
     - Password: Enter the password with the following rules:
