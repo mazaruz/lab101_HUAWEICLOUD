@@ -80,10 +80,10 @@ In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet an
     - Region: Select the corresponding region
     - Name: Enter the VPC name e.g. *vpc-red*
     - CIDR Block: Enter the CIDR block that will be allocated for this VPC. Select the mask that you need. 
-    
+    - Enterprise Project: Select the Enterprise Project that you just created (Skip this if you are using Individual Account)
+
 > Please be mindful that when planning VPC CIDR, if VPC needs to communicate with each other or connect back to local on-premises, the CIDR range must not be conflicted
 
-    - Enterprise Project: Select the Enterprise Project that you just created (Skip this if you are using Individual Account)
 4. Enter the following information under **Default Subnet**
     - Name: Enter the subnet name e.g. *subnet-pri-red*
     - CIDR Block: Enter the CIDR block that is under the VPC CIDR range. Select the mask that you need
