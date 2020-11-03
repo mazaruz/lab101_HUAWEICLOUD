@@ -62,7 +62,7 @@ The Virtual Private Cloud (VPC) service enables you to provision logically isola
 
 In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet and 1 Private Subnet) that span across two availability zones (AZs) which based on Best Practices from Huawei Cloud. The reference architecture as below picture
 
-![Architecture](/home/maz/gitrepo-mazaruz/lab101_HUAWEICLOUD/Architecture.png?raw=true "Architecture")
+![Architecture](/home/maz/gitrepo-mazaruz/lab101_HUAWEICLOUD/img/Architecture.png?raw=true "Architecture")
 
 ### Objective
 1. Understand the VPC components e.g. Subnet, NACL Route Table
