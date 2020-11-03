@@ -71,7 +71,7 @@ In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet an
 4. Able to design and create VPC to suit your own requirements
 5. Able to create VPC Flow Logs to record traffics going in and out from VPC //Need to recheck the permission
 
-## Duration
+### Duration
 30 minutes
 
 ### Task 1 - Create a VPC and a private subnet with default route
@@ -147,7 +147,7 @@ In this lab, we will be performing two types of access (Ingress, Egress) while l
 
 Before we can configure our custom route table, EIP and NAT Gateway have to be created first. 
 
-### Task 3.1 - Create EIPs for EC2
+#### Task 3.1 - Create EIPs for EC2
 1. Navigate to **Network Console**, select **Elastic IP and Bandwidth**, and click **EIPs**
 2. Click **Buy EIP** on the top right corner
 3. There are various options to create EIP, in this lab, we recommended to create with these following setting for testing purpose:
@@ -161,7 +161,7 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
     - Quantity: 1
 4. Click **Next**, the summary screen will show that you're purchasing EIP and Bandwidth together with the estimated price per hour. Click **Submit** to create the EIP.
 
-### Task 3.2 - Create EIPs for NAT Gateway
+#### Task 3.2 - Create EIPs for NAT Gateway
 1. Navigate to **Network Console**, select **Elastic IP and Bandwidth**, and click **EIPs**
 2. Click **Buy EIP** on the top right corner
 3. There are various options to create EIP, in this lab, we recommended to create with these following setting for testing purpose:
@@ -175,7 +175,7 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
     - Quantity: 1
 4. Click **Next**, the summary screen will show that you're purchasing EIP and Bandwidth together with the estimated price per hour. Click **Submit** to create the EIP.
 
-### Task 3.3 - Create NAT Gateway with SNAT
+#### Task 3.3 - Create NAT Gateway with SNAT
 1. Navigate to **Network Console** then click **Buy Public NAT Gateway** at the top right corner
 2. Enter the following information:
     - Billing mode: Pay-per-use
@@ -195,11 +195,11 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
     - EIP: Select the EIP that you just created to bind with the SNAT Rule
 7. Click **OK** to create SNAT Rule
 
-### Task 3.4 Create Security Group 
+#### Task 3.4 Create Security Group 
 
 Because we will need security group specifically for each of our ECS, we need to create at least 2 security groups and attach each one of them to the ECS.
 
-### Task 3.4.1 Create Security Group for Public ECS
+##### Task 3.4.1 Create Security Group for Public ECS
 1. Navigate to **Network Console**, select **Access Control** and click **Security Groups**
 2. Click **Create Security Group** at the top right corner
 3. On pop-up window, enter the following information:
@@ -215,7 +215,7 @@ Because we will need security group specifically for each of our ECS, we need to
     - Description: For Internet SSH acccess from my IP Address
 8. Click **OK** to create the inbound rule
 
-### Task 3.4.2 Create Security Group for Private ECS
+##### Task 3.4.2 Create Security Group for Private ECS
 1. Navigate to **Network Console**, select **Access Control** and click **Security Groups**
 2. Click **Create Security Group** at the top right corner
 3. On pop-up window, enter the following information:
@@ -231,9 +231,9 @@ Because we will need security group specifically for each of our ECS, we need to
     - Description: For Internal SSH acccess from sg-ssh-internet
 8. Click **OK** to create the inbound rule
 
-### Task 3.5 - Create Elastic Cloud Server (ECS)
+#### Task 3.5 - Create Elastic Cloud Server (ECS)
 
-### Task 3.5.1 - Create Public ECS
+##### Task 3.5.1 - Create Public ECS
 
 1. Navigate to **Cloud Server Console** and select **Elastic Cloud Server**
 2. Click **Buy ECS** to create ECS 
@@ -264,7 +264,7 @@ Because we will need security group specifically for each of our ECS, we need to
 6. Click **Next: Confirm**, review the summary of ECS configuration. Under **Enterprise Project**, select the enterprise project that you have created earlier.
 7. Check the box on **Agreement**, then click **Next**. The ECS will be created shortly. Click **Back to ECS List** and wait few minutes until the ECS becomes **running**
 
-### Task 3.5.2 - Create Private ECS
+##### Task 3.5.2 - Create Private ECS
 
 1. Navigate to **Cloud Server Console** and select **Elastic Cloud Server**
 2. Click **Buy ECS** to create ECS 
@@ -295,7 +295,7 @@ Because we will need security group specifically for each of our ECS, we need to
 6. Click **Next: Confirm**, review the summary of ECS configuration. Under **Enterprise Project**, select the enterprise project that you have created earlier.
 7. Check the box on **Agreement**, then click **Next**. The ECS will be created shortly. Click **Back to ECS List** and wait few minutes until the ECS becomes **running**
 
-### Task 3.6 - Configure custom route to allow egress access for the private ECS
+#### Task 3.6 - Configure custom route to allow egress access for the private ECS
 
 Because the public ECS is attached to an EIP already, you can try to access the ECS via SSH with the EIP you have assigned to them without the need for routing configuration. However, the private ECS won't be able to do so, and it requires NAT Gateway to help reaching out to the internet while we are restricting the access from the internet to this private ECS. If we want to access the private ECS from the internet, we would need to leverage the public ECS that we called "Bastion Host" or "Jump Host" to perform the remote secure shell instead. 
 
@@ -340,7 +340,7 @@ Now we have configured the route for private ECS, it should be able to reach the
     ```
 3. Enter the password that you have configured for this ECS. You should be able to connect to the public bastion host via SSH succesfully
 
-### Task 4.1 Testing egress connection from the private ECS
+#### Task 4.1 Testing egress connection from the private ECS
 
 Once we have successfully connected to the public ECS, now we will remote to the private ECS and test our NAT Gateway setup with the custom route. 
 
