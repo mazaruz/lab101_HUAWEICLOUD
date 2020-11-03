@@ -354,5 +354,4 @@ Once we have successfully connected to the public ECS, now we will remote to the
     `apt-get -y upgrade`
 6. Wait for few minutes until all the software package in this private ECS is completely updated
 
-## Congratulation! 
-## Now you able to create a VPC with subnets to isolate public and private access! 
+## Congratulation! Now you able to create a VPC with subnets to isolate public and private access! 
