@@ -343,10 +343,12 @@ Now we have configured the route for private ECS, it should be able to reach the
 Once we have successfully connected to the public ECS, now we will remote to the private ECS and test our NAT Gateway setup with the custom route. 
 
 1. From the SSH session, type the following command to connect to the private ECS
-    `ssh root@<The private ECS IP Address>`
+    ```
+    ssh root@<The private ECS IP Address>
+    ```
 2. Enter the password that you have configure for this ECS. You should be able to connect to the private ECS successfully
 3. Enter the following command to see if this private ECS can reach to the internet
-    `nslookup www.huaweicloud.com`
+    ```nslookup www.huaweicloud.com```
     `curl -I https://www.huaweicloud.com/
 4. If the command return HTTP/2 200, then it means that this private ECS can reach out to the internet
 5. Enter the following command to update software package in the private ECS
