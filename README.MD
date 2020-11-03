@@ -137,9 +137,9 @@ Now we have created our first VPC, subnet and route table. But the default route
 
 To allow public network access, there are three (3) services that the customer can leverage as followed;
 
-1. EIP (Elastic IP) - The EIP provides independent public IP Address and bandwidth for the internet access. EIPs can be bound to or unbound from Elastic Cloud Servers (ECSs), Bare Metal Server (BMSs), Virtual IP Address, NAT Gateway, or Load Balancer. There are various billing modes to meet service requirements
-2. ELB (Elastic Load Balancer) - ELB distributes access traffic among multiple ECSs to balance application load, improving fault tolerance and expanding service capabilities of applications. 
-3. NAT Gateway - NAT Gateway provides both Source NAT (SNAT) and Destination NAT (DNAT) for the resources in a VPC and allows servers to access or provide services accessible from the internet
+1. **EIP (Elastic IP)** - The EIP provides independent public IP Address and bandwidth for the internet access. EIPs can be bound to or unbound from Elastic Cloud Servers (ECSs), Bare Metal Server (BMSs), Virtual IP Address, NAT Gateway, or Load Balancer. There are various billing modes to meet service requirements
+2. **ELB (Elastic Load Balancer)** - ELB distributes access traffic among multiple ECSs to balance application load, improving fault tolerance and expanding service capabilities of applications. 
+3. **NAT Gateway** - NAT Gateway provides both Source NAT (SNAT) and Destination NAT (DNAT) for the resources in a VPC and allows servers to access or provide services accessible from the internet
 
 In this lab, we will be performing two types of access (Ingress, Egress) while leveraging EIP and NAT Gateway to simulate the use case of public subnet and private subnet with a custom route table
 - Ingress: We will be using EIP to attach the Elastic Cloud Server (ECS) that sitting in public subnet, and we will execute secure remote session to the ECS in private subnet
