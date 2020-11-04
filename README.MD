@@ -193,7 +193,7 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
     - Scenario: VPC (We are creating this SNAT rule to route traffic from our VPC to the internet)
     - Type: Subnet (We are allowing resources from specific subnet i.e. private subnet to access the internet)
     - Subnet: Select *subnet-pri-red* because we want to allow only resources that sitting under private subnet to access the internet
-    - EIP: Select the EIP that you just created to bind with the SNAT Rule
+    - EIP: Select the EIP for NAT that you just created to bind with the SNAT Rule
 7. Click **OK** to create SNAT Rule
 
 #### Task 3.4 Create Security Group 
