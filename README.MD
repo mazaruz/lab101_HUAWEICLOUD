@@ -148,7 +148,7 @@ In this lab, we will be performing two types of access (Ingress, Egress) while l
 
 Before we can configure our custom route table, EIP and NAT Gateway have to be created first. 
 
-#### Task 3.1 - Create EIPs for EC2
+#### Task 3.1 - Create EIPs for ECS
 1. Navigate to **Network Console**, select **Elastic IP and Bandwidth**, and click **EIPs**
 2. Click **Buy EIP** on the top right corner
 3. There are various options to create EIP, in this lab, we recommended to create with these following setting for testing purpose:
@@ -157,7 +157,7 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
     - EIP Type: Dynamic BGP
     - Billed by: Bandwidth 
     - Bandwidth: 1 Mbps
-    - Bandwidth Name: Enter the name for your bandwidth e.g. bandwidth-red-ec2
+    - Bandwidth Name: Enter the name for your bandwidth e.g. bandwidth-red-ecs
     - Enterprise Project: Select the Enterprise Project that you just created (Skip this if you are using Individual Account)
     - Quantity: 1
 4. Click **Next**, the summary screen will show that you're purchasing EIP and Bandwidth together with the estimated price per hour. Click **Submit** to create the EIP.
