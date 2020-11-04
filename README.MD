@@ -277,7 +277,7 @@ Because we will need security group specifically for each of our ECS, we need to
     - Image: Select **Public Image** and choose **Ubuntu 18.04 server 64bit (40GB)** 
     - System Disk: Leave as default
 4. Click **Next: Configure Network** and enter the following information:
-    - Network: Select *vpc-red* or the VPC that you have created earlier, and select *subnet-pri-red* or the public subnet that you have created earlier
+    - Network: Select *vpc-red* or the VPC that you have created earlier, and select *subnet-pri-red* or the private subnet that you have created earlier
     - Security Group: Select the security group that you created for private ssh access e.g. sg-ssh-internal
     - EIP: Select **Not required**
 5. Click **Next: Configure Advanced Settings** and enter the following information:
