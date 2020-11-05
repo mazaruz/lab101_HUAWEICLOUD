@@ -365,4 +365,4 @@ Once we have successfully connected to the public ECS, now we will remote to the
 
 ## Congratulation! Now you able to create a VPC with subnets to isolate public and private access! 
 
-## Please follow this ![Step to Delete](/Deletion.MD)
+## Once you have finish, you can follow this [Step to Delete](/Deletion.MD)
