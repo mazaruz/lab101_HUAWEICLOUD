@@ -364,5 +364,5 @@ Once we have successfully connected to the public ECS, now we will remote to the
 6. Wait for few minutes until all the software package in this private ECS is completely updated
 
 ## Congratulation! Now you able to create a VPC with subnets to isolate public and private access! 
-
-## Once you have finish, you can follow this [Step to Delete](/Deletion.MD)
+##
+## You can follow this [Step to Delete](/Deletion.MD) to delete all the test resources on HUAWEI CLOUD
