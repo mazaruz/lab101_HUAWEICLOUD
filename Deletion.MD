@@ -2,6 +2,15 @@
 
 When you're finishing the lab, perform the following steps to Delete resources from the account to avoid additional charges
 
+1. Delete ECSs
+2. Delete Security Groups
+3. Delete NAT Gateway
+4. Release EIPs
+5. Delete Subnets and Route Tables
+6. Delete VPC
+
+Detail steps are listed below
+
 ### Task 1 - Delete ECS 
 1. Navigate to HUAWEI CLOUD Console and select **Elastic Cloud Server** 
 2. Select the ECS that you have created for this workshop e.g. ecs-red-private or ecs-red-bastion (You can select multiple ECSs)
