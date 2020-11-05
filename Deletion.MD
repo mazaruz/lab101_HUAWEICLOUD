@@ -11,7 +11,7 @@ When you're finishing the lab, perform the following steps to Delete resources f
 
 Detail steps are listed below
 
-### Task 1 - Delete ECS 
+### Task 1 - Delete ECSs 
 1. Navigate to HUAWEI CLOUD Console and select **Elastic Cloud Server** 
 2. Select the ECS that you have created for this workshop e.g. ecs-red-private or ecs-red-bastion (You can select multiple ECSs)
 3. Click **More**, choose **Delete** 
