@@ -1,7 +1,7 @@
-# NET 101 - Build your first Virtual Private Cloud (VPC) on Huawei Cloud
+# NET 101 - Build your first Virtual Private Cloud (VPC) on HUAWEI CLOUD
 
 ### Objective
-This workshop intends to help those who wanted to learn the foundation services on Huawei Cloud. It focuses on the network service called Virtual Private Cloud (VPC). Once you have finished the workshop you will understand how to create, manage and operate the network on Huawei Cloud. 
+This workshop intends to help those who wanted to learn the foundation services on HUAWEI CLOUD. It focuses on the network service called Virtual Private Cloud (VPC). Once you have finished the workshop you will understand how to create, manage and operate the network on HUAWEI CLOUD. 
 
 Our objective is to create a simple public/private network where there are two (2) ECSs running in both private and public subnet. Below are the requirements: 
 
@@ -10,7 +10,7 @@ Our objective is to create a simple public/private network where there are two (
 - Public ECS must acting as Bastion or Jumphost and restrict the remote secure shell from **specific IP Address only**
 
 ## Before we begin
-Please ensure that you have registered Huawei Cloud account and able to access the console with IAM user with necessary permission to create resources that we will be using in this workshop. 
+Please ensure that you have registered HUAWEI CLOUD account and able to access the console with IAM user with necessary permission to create resources that we will be using in this workshop. 
 > We DO NOT recommend the usage of root account or overly permissive IAM user for this workshop. 
 
 ## Lab 0 - Understanding Individual Account vs Enterprise Account
@@ -18,7 +18,7 @@ Please ensure that you have registered Huawei Cloud account and able to access t
 > Skip this lab if you are using "Individual Account"
 
 ## Overview
-Huawei Cloud has two types of account; Invidual and Enterprise. The account type cannot be changed once you have specified the type. 
+HUAWEI CLOUD has two types of account; Invidual and Enterprise. The account type cannot be changed once you have specified the type. 
 
 1. **Individual Account**
     This account type is for the customer that performing their own testing at home. It reduces the complexity of registration and verification process. Only credit card and phone number are required to get started. However, Real-name authentication is necessary if the customer needs to leverage resources from these following regions; CN North-Beijing4, CN East-Shanghai1, CN South-Guangzhou.
@@ -35,7 +35,7 @@ Huawei Cloud has two types of account; Invidual and Enterprise. The account type
 5 minutes
 
 ### Task 1 - Create Enterprise Project
-1. Login to Huawei Cloud Console, select **Enterprise** -> **Project Management** 
+1. Login to **HUAWEI CLOUD Console**, select **Enterprise** -> **Project Management** 
 2. Click **Create Enterprise Project** to create new Enterprise Project under the organization you're in
     - Select **Test project** as project type.
 > Project Type
@@ -60,13 +60,13 @@ Huawei Cloud has two types of account; Invidual and Enterprise. The account type
 ## Overview
 The Virtual Private Cloud (VPC) service enables you to provision logically isolated, configurable, and managable virtual networks for cloud servers, cloud containers, and cloud databases, improving cloud service security and simplifying network deployment. 
 
-In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet and 1 Private Subnet) that span across two availability zones (AZs) which based on Best Practices from Huawei Cloud. The reference architecture as below picture
+In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet and 1 Private Subnet) that span across two availability zones (AZs) which based on Best Practices from HUAWEI CLOUD. The reference architecture as below picture
 
 ![Screenshot of the architecture](/images/architecture.png?raw=true)
 
 ### Objective
 1. Understand the VPC components e.g. Subnet, NACL Route Table
-2. Understand how subnets, route tables, and routing on Huawei Cloud work
+2. Understand how subnets, route tables, and routing on HUAWEI CLOUD work
 3. Understand the differences between Public Network Access and Private Network Access
 4. Able to design and create VPC to suit your own requirements
 
@@ -74,7 +74,7 @@ In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet an
 30 minutes
 
 ### Task 1 - Create a VPC and a private subnet with default route
-1. Navigate to Huawei Cloud Console and select **VPC**
+1. Navigate to **HUAWEI CLOUD Console** and select **VPC**
 2. Click **Create VPC** on the top right corner
 3. Enter the following information under **Basic Information** 
     - Region: Select the corresponding region
@@ -89,7 +89,7 @@ In this lab, we will be creating a single VPC with 2 subnets (1 Public Subnet an
     - CIDR Block: Enter the CIDR block that is under the VPC CIDR range. Select the mask that you need
     - Leave the rest as default for now
 5. Click **Create Now** at the bottom left of the screen
-6. Navigate to **Network Console** and select **Virtual Private Cloud** to check if there is a new VPC created. To see more detail, click on the newly created VPC. There has to be 1 Subnet and 1 Route Table created as well.
+6. Navigate to **HUAWEI CLOUD Console** and select **Virtual Private Cloud** to check if there is a new VPC created. To see more detail, click on the newly created VPC. There has to be 1 Subnet and 1 Route Table created as well.
 
 > We recommended to change the default route table name of the newly created VPC to *rtb-pri-red* to avoid any confusion in the future
 
@@ -103,7 +103,7 @@ Now we have created our first VPC, subnet and route table. But the default route
 
 ### Task 2 - Create a public subnet and a custom route table
 
-1. Navigate to **Network Console** and select **Subnets**
+1. Navigate to **Virtual Private Cloud Console** and select **Subnets**
 2. Click **Create Subnet** on the top right corner
 3. On the pop-up windows, enter the following information
     - VPC: Select the VPC that this subnet will be associated with
@@ -121,7 +121,7 @@ Now we have created our first VPC, subnet and route table. But the default route
 > - **xxx.xxx.x.255 Network broadcast address**
 > These reserved addresses can be different. They depend on the customer's advance setting in their subnet configuration
 
-6. Navigate to **Network Console** and select **Route Tables**
+6. Navigate to **Virtual Private Cloud Console** and select **Route Tables**
 7. Click **Create Route Table** on the top right corner
 8. On the pop-up windows, enter the following information
     - Name: Enter the name of the route table e.g. *rtb-pub-red*
@@ -131,7 +131,7 @@ Now we have created our first VPC, subnet and route table. But the default route
 10. On the pop-up windows, click **Associate Subnet** to associate this newly created route table with the public subnet that we created earlier
 11. Click **Associate Subnet**, select the *subnet-pub-red*, and click **OK** 
 12. On the warning pop-up windows, click **Yes**
-13. Navigate to **Network Console** and select **Subnets**
+13. Navigate to **Virtual Private Cloud Console** and select **Subnets**
 14. You should see on the console that *subnet-pub-red* is associating with the route table name *rtb-pub-red*
 
 ### Task 3 - Create custom route to allow ingress and egress access via the subnets
@@ -149,7 +149,7 @@ In this lab, we will be performing two types of access (Ingress, Egress) while l
 Before we can configure our custom route table, EIP and NAT Gateway have to be created first. 
 
 #### Task 3.1 - Create EIPs for ECS
-1. Navigate to **Network Console**, select **Elastic IP and Bandwidth**, and click **EIPs**
+1. Navigate to **Virtual Private Cloud Console**, select **Elastic IP and Bandwidth**, and click **EIPs**
 2. Click **Buy EIP** on the top right corner
 3. There are various options to create EIP, in this lab, we recommended to create with these following setting for testing purpose:
     - Billing Mode: Pay-per-use
@@ -163,7 +163,7 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
 4. Click **Next**, the summary screen will show that you're purchasing EIP and Bandwidth together with the estimated price per hour. Click **Submit** to create the EIP.
 
 #### Task 3.2 - Create EIPs for NAT Gateway
-1. Navigate to **Network Console**, select **Elastic IP and Bandwidth**, and click **EIPs**
+1. Navigate to **Virtual Private Cloud Console**, select **Elastic IP and Bandwidth**, and click **EIPs**
 2. Click **Buy EIP** on the top right corner
 3. There are various options to create EIP, in this lab, we recommended to create with these following setting for testing purpose:
     - Billing Mode: Pay-per-use
@@ -177,7 +177,7 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
 4. Click **Next**, the summary screen will show that you're purchasing EIP and Bandwidth together with the estimated price per hour. Click **Submit** to create the EIP.
 
 #### Task 3.3 - Create NAT Gateway with SNAT
-1. Navigate to **Network Console** then click **Buy Public NAT Gateway** at the top right corner
+1. Navigate to **Virtual Private Cloud Console** then click **Buy Public NAT Gateway** at the top right corner
 2. Enter the following information:
     - Billing mode: Pay-per-use
     - Region: Select the same region as your VPC
@@ -201,7 +201,7 @@ Before we can configure our custom route table, EIP and NAT Gateway have to be c
 Because we will need security group specifically for each of our ECS, we need to create at least 2 security groups and attach each one of them to the ECS.
 
 ##### Task 3.4.1 Create Security Group for Public ECS
-1. Navigate to **Network Console**, select **Access Control** and click **Security Groups**
+1. Navigate to **Virtual Private Cloud Console**, select **Access Control** and click **Security Groups**
 2. Click **Create Security Group** at the top right corner
 3. On pop-up window, enter the following information:
     - Name: Enter the security group name e.g. sg-ssh-internet
@@ -217,7 +217,7 @@ Because we will need security group specifically for each of our ECS, we need to
 8. Click **OK** to create the inbound rule
 
 ##### Task 3.4.2 Create Security Group for Private ECS
-1. Navigate to **Network Console**, select **Access Control** and click **Security Groups**
+1. Navigate to **Virtual Private Cloud Console**, select **Access Control** and click **Security Groups**
 2. Click **Create Security Group** at the top right corner
 3. On pop-up window, enter the following information:
     - Name: Enter the security group name e.g. sg-ssh-internal
@@ -236,7 +236,7 @@ Because we will need security group specifically for each of our ECS, we need to
 
 ##### Task 3.5.1 - Create Public ECS
 
-1. Navigate to **Cloud Server Console** and select **Elastic Cloud Server**
+1. Navigate to **HUAWEI CLOUD Console** and select **Elastic Cloud Server**
 2. Click **Buy ECS** to create ECS 
 3. Enter the following information for **Configure Basic Settings** screen:
     - Billing Mode: Pay-per-use
@@ -267,7 +267,7 @@ Because we will need security group specifically for each of our ECS, we need to
 
 ##### Task 3.5.2 - Create Private ECS
 
-1. Navigate to **Cloud Server Console** and select **Elastic Cloud Server**
+1. Navigate to **HUAWEI CLOUD Console** and select **Elastic Cloud Server**
 2. Click **Buy ECS** to create ECS 
 3. Enter the following information for **Configure Basic Settings** screen:
     - Billing Mode: Pay-per-use
@@ -300,7 +300,7 @@ Because we will need security group specifically for each of our ECS, we need to
 
 Because the public ECS is attached to an EIP already, you can try to access the ECS via SSH with the EIP you have assigned to them without the need for routing configuration. However, the private ECS won't be able to do so, and it requires NAT Gateway to help reaching out to the internet while we are restricting the access from the internet to this private ECS. If we want to access the private ECS from the internet, we would need to leverage the public ECS that we called "Bastion Host" or "Jump Host" to perform the remote secure shell instead. 
 
-1. Navigate to **Network Console** and select **Route Tables**
+1. Navigate to **Virtual Private Cloud Console** and select **Route Tables**
 2. Click on the private route that you have created earlier e.g. *rtb-pri-red*
 3. In this screen, it will show more detail about the route table. Click **Add Route** to create additional route that we need for the private ECS. 
 4. On pop-up windows, enter the following information to add the route for NAT gateway:
