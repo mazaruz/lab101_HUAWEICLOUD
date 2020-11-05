@@ -316,7 +316,9 @@ Now we have configured the route for private ECS, it should be able to reach the
 ### For Windows User
 
 #### Pre-requisite
-- Ensure you have Putty installed on local machine (You can download from: [here]https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+- Ensure you have Putty installed on local machine (You can download from: [here])
+
+[here]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 - Ensure that you have configured the inbound rules of the security group to allow your local computer to access the ECS SSH
 - Ensure that you have the network connection between the local computer to target ECS
 
